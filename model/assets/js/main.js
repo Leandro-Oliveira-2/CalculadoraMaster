@@ -18,10 +18,10 @@ function Calculadora(){
             if(clic.classList.contains('=')){
                 const numeroAtual = display.textContent;
                 const resultado = calcular(parseFloat(numeroAnterior), operador, parseFloat(numeroAtual));
-                console.log(resultado.toFixed(2));
-                const paraEditar = resultado.toFixed(2);
+                console.log(resultado)
+                const paraEditar = resultado<1? resultado.toFixed(2):resultado;
                 display.textContent = paraEditar
-
+                
             }else if(clic.classList.contains('backspace')){
                 const valorDisplay = display.textContent;
                 const novoValor = valorDisplay.slice(0,-1);
